@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Tours - Your Dream Vacation Awaits</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Wanderlust Tours</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#packages" class="nav-link">Packages</a></li>
+                <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="book-now.html" class="nav-link booking-btn" onclick="window.location.href='book-now.html'">Book Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Places</h1>
+            <p>Experience the world's most beautiful destinations with our expertly crafted tour packages</p>
+            <button class="cta-button" onclick="scrollToSection('packages')">Explore Tours</button>
+        </div>
+        <div class="hero-image">
+            <img src="assets/Image1.jpg" alt="Beautiful travel destination">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Wanderlust Tours</h2>
+                    <p>With over 15 years of experience in the travel industry, Wanderlust Tours has been creating unforgettable memories for thousands of travelers worldwide. We specialize in crafting personalized travel experiences that cater to your unique preferences and budget.</p>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <strong>Address:</strong>
+                            <p>Tiruchengode, Namakkal District,637-215</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Phone:</strong>
+                            <p>+91 9585087170</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Email:</strong>
+                            <p>toursandtravels@wanderlusttours.com</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Operating Hours:</strong>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                               Saturday: 10:00 AM - 4:00 PM<br>
+                               Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Travel planning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2>Tour Packages</h2>
+            <p class="section-subtitle">Choose from our carefully curated tour packages</p>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Tropical Paradise">
+                    <div class="package-content">
+                        <h3>Tropical Paradise</h3>
+                        <p>7 days in beautiful tropical islands with luxury accommodations</p>
+                        <ul class="package-features">
+                            <li>Luxury beach resort</li>
+                            <li>All meals included</li>
+                            <li>Water sports activities</li>
+                            <li>Airport transfers</li>
+                        </ul>
+                        <div class="package-price">
+                            <span class="price">₹1,10,000</span>
+                            <span class="duration">per person</span>
+                        </div>
+                        <button class="book-button" onclick="openBookingModal('Tropical Paradise', 110000)" onclick="window.location.href='book-now.html'">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="assets/group-four-hikers-backpacks-walks-600nw-1909533559.webp" alt="Mountain Adventure">
+                    <div class="package-content">
+                        <h3>Mountain Adventure</h3>
+                        <p>5 days hiking through scenic mountain trails and valleys</p>
+                        <ul class="package-features">
+                            <li>Professional guide</li>
+                            <li>Camping equipment</li>
+                            <li>Meals and snacks</li>
+                            <li>Transportation</li>
+                        </ul>
+                        <div class="package-price">
+                            <span class="price">₹75,000</span>
+                            <span class="duration">per person</span>
+                        </div>
+                        <button class="book-button" onclick="openBookingModal('Mountain Adventure', 75000)" onclick="window.location.href='book-now.html'">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="assets/Untitled design - 2024-05-28T112901.389_20240528112939_ogImage_34.png" alt="Cultural Heritage">
+                    <div class="package-content">
+                        <h3>Cultural Heritage</h3>
+                        <p>10 days exploring ancient cities and historical landmarks</p>
+                        <ul class="package-features">
+                            <li>Expert cultural guide</li>
+                            <li>Museum entries</li>
+                            <li>Traditional cuisine</li>
+                            <li>Comfortable hotels</li>
+                        </ul>
+                        <div class="package-price">
+                            <span class="price">₹1,35,000</span>
+                            <span class="duration">per person</span>
+                        </div>
+                        <button class="book-button" onclick="openBookingModal('Cultural Heritage', 135000)" onclick="window.location.href='book-now.html'">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="assets/young-caucasian-family-traveling-exploring-600nw-2361182441.webp" alt="City Explorer">
+                    <div class="package-content">
+                        <h3>City Explorer</h3>
+                        <p>4 days discovering vibrant cities and urban attractions</p>
+                        <ul class="package-features">
+                            <li>City center hotel</li>
+                            <li>Public transport pass</li>
+                            <li>Food tour included</li>
+                            <li>Shopping districts</li>
+                        </ul>
+                        <div class="package-price">
+                            <span class="price">₹60,000</span>
+                            <span class="duration">per person</span>
+                        </div>
+                        <button class="book-button" onclick="openBookingModal('City Explorer', 60000)" onclick="window.location.href='book-now.html'">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="assets/wildlife safari.webp" alt="Wildlife Safari">
+                    <div class="package-content">
+                        <h3>Wildlife Safari</h3>
+                        <p>6 days exploring national parks and wildlife reserves</p>
+                        <ul class="package-features">
+                            <li>Guided jungle safaris</li>
+                            <li>Stay in Forest Lodges</li>
+                            <li>All Meals and snacks Included</li>
+                            <li>Photography Sessions</li>
+                        </ul>
+                        <div class="package-price">
+                            <span class="price">₹95,000</span>
+                            <span class="duration">per person</span>
+                        </div>
+                        <button class="book-button" onclick="openBookingModal('Wildlife Safari', 95000)" onclick="window.location.href='book-now.html'">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="assets/desert retreat.jpg" alt="Desert Retreat">
+                    <div class="package-content">
+                        <h3>Desert Retreat</h3>
+                        <p>5 unforgettable days in the heart of golden sand dunes</p>
+                        <ul class="package-features">
+                            <li>Camel Rides & Desert Camping</li>
+                            <li>Cultural Evening with Folk Music</li>
+                            <li> Traditional Rajasthani meals</li>
+                            <li>AC tent accommodation</li>
+                        </ul>
+                        <div class="package-price">
+                            <span class="price">₹50,000</span>
+                            <span class="duration">per person</span>
+                        </div>
+                        <button class="book-button" onclick="openBookingModal('Desert Retreat', 50000)" onclick="window.location.href='book-now.html'">Book Now</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <p class="section-subtitle">Explore our most sought-after travel destinations</p>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Santorini, Greece">
+                    <div class="destination-overlay">
+                        <h3>Santorini, Greece</h3>
+                        <p>Beautiful white-washed buildings overlooking the Aegean Sea</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Maldives">
+                    <div class="destination-overlay">
+                        <h3>Maldives</h3>
+                        <p>Crystal clear waters and pristine beaches in the Indian Ocean</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="assets/mountain-historical-history-peru-wallpaper-preview.jpg" alt="Machu Picchu, Peru">
+                    <div class="destination-overlay">
+                        <h3>Machu Picchu, Peru</h3>
+                        <p>Ancient Incan ruins high in the Andes Mountains</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="assets/pexels-photo-753772.jpeg" alt="Swiss Alps">
+                    <div class="destination-overlay">
+                        <h3>Swiss Alps</h3>
+                        <p>Majestic mountains perfect for skiing and hiking adventures</p>
+                    </div>
+                </div>
+                 <div class="destination-card">
+                    <img src="assets/ladakh.jpg" alt="Ladakh">
+                    <div class="destination-overlay">
+                        <h3>Ladakh</h3>
+                        <p>Unveiling the hidden gem of India - Leh Ladakh.</p>
+                    </div>
+                </div>
+                 <div class="destination-card">
+                    <img src="assets/eiffel-tower-cityscape-city-landmark-wallpaper-preview.jpg" alt="Paris">
+                    <div class="destination-overlay">
+                        <h3>Paris</h3>
+                        <p>You’ll have to fall in love at least once in your life, or Paris has failed to rub off on you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <p class="section-subtitle">Read reviews from our satisfied travelers</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Wanderlust Tours made our honeymoon absolutely perfect! The attention to detail and personalized service exceeded our expectations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/0734f8d310f2db45b2227139df0851d4.jpg" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Harini</h4>
+                            <span>Tropical Paradise Package</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The mountain adventure tour was incredible! Professional guides, stunning views, and well-organized logistics throughout the journey."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images.jpg" alt="Michael Chen">
+                        <div class="author-info">
+                            <h4>Bharath</h4>
+                            <span>Mountain Adventure Package</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Excellent cultural tour with knowledgeable guides. We learned so much about the history and traditions of each destination."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/HD-wallpaper-anu-shiv-tamil-model-saree-lover.jpg" alt="Emma Rodriguez">
+                        <div class="author-info">
+                            <h4>MuthuLakshmi</h4>
+                            <span>Cultural Heritage Package</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">Get in touch for personalized travel planning</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Visit Our Office</h3>
+                        <p>Tiruchengode<br>Namakkal District<br>637-215</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Call Us</h3>
+                        <p>+91 9585087170</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email Us</h3>
+                        <p>toursandtravels@wanderlusttours.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                           Saturday: 10:00 AM - 4:00 PM<br>
+                           Sunday: Closed</p>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="submitContactForm(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone">
+                    <select name="interest" required>
+                        <option value="">Select Tour Interest</option>
+                        <option value="tropical">Tropical Paradise</option>
+                        <option value="mountain">Mountain Adventure</option>
+                        <option value="cultural">Cultural Heritage</option>
+                        <option value="city">City Explorer</option>
+                        <option value="wildlife">WildLife Safari</option>
+                        <option value="desert">Desert Retreat</option>
+                        <option value="custom">Custom Package</option>
+                    </select>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Tour</h2>
+            <div id="bookingDetails">
+                <h3 id="selectedPackage"></h3>
+                <p id="packagePrice"></p>
+            </div>
+            <form id="bookingForm" onsubmit="processBooking(event)">
+                <div class="form-group">
+                    <label for="customerName">Full Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerEmail">Email:</label>
+                    <input type="email" id="customerEmail" name="customerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Phone:</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers:</label>
+                    <input type="number" id="travelers" name="travelers" min="1" max="10" value="1" required onchange="calculateTotal()">
+                </div>
+                <div class="form-group">
+                    <label for="travelDate">Preferred Travel Date:</label>
+                    <input type="date" id="travelDate" name="travelDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests:</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+                </div>
+                <div class="booking-summary">
+                    <div class="summary-item">
+                        <span>Package Price:</span>
+                        <span id="basePrice">₹0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Number of Travelers:</span>
+                        <span id="travelersCount">1</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total Amount:</span>
+                        <span id="totalAmount">₹0</span>
+                    </div>
+                </div>
+                <button type="submit" class="book-submit-btn">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePaymentModal()">&times;</span>
+            <h2>Secure Payment</h2>
+            <div class="payment-summary">
+                <h3 id="paymentPackage"></h3>
+                <p>Total Amount: <span id="paymentTotal"></span></p>
+            </div>
+            <form id="paymentForm" onsubmit="processPayment(event)">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date:</label>
+                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cardName">Cardholder Name:</label>
+                    <input type="text" id="cardName" name="cardName" required>
+                </div>
+                <div class="form-group">
+                    <label for="billingAddress">Billing Address:</label>
+                    <textarea id="billingAddress" name="billingAddress" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="payment-submit-btn">Complete Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wanderlust Tours</h3>
+                    <p>Creating unforgettable travel experiences since 2008. Your adventure begins with us.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#packages">Tour Packages</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Tiruchengode<br>Namakkal District, 637-215</p>
+                    <p>Phone: +91 9585087170</p>
+                    <p>Email: toursandtravels@wanderlusttours.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Booking Policies</h4>
+                    <p>• Free cancellation up to 48 hours before departure</p>
+                    <p>• Full refund for cancellations due to weather</p>
+                    <p>• Travel insurance recommended</p>
+                    <p>• Group discounts available</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            <div class="container">
+                <p>Tours&Travels®WanderLust</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
