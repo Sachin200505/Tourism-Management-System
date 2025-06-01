@@ -159,35 +159,7 @@
   });
 </script>
 
-<script src="booking.js">
-  document.getElementById("bookingForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent form from submitting the traditional way
 
-  const bookingData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    destination: document.getElementById("destination").value
-  };
-
-  fetch("http://localhost:3000/api/book", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(bookingData)
-  })
-    .then(response => response.text())
-    .then(message => {
-      alert(message); // Show a popup after booking is successful
-      document.getElementById("bookingForm").reset(); // Clear the form
-    })
-    .catch(error => {
-      console.error("Booking Error:", error);
-      alert("There was an error while booking. Please try again.");
-    });
-});
-
-</script>
 
 </body>
 </html>
